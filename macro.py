@@ -46,11 +46,15 @@ def press(key, delay = 0.02):
 
 def isRetina():
     return retina
-def openApp(app):
-    cmd = """ osascript -e 'activate application "{}"' """.format(app)
-    os.system(cmd)
 
-def closeApp(app):
+def runAppleScript(code):
+    cmd = " osascript -e '{}' ".format(code)
+    os.system(cmd)
+    
+def openApp(app):
+    runAppleScript('activate application "{}"''.format(app))
+                   
+def quitApp(app):
     cmd = """ osascript -e 'tell application "{}" to quit' """.format(app)
     os.system(cmd)
 
