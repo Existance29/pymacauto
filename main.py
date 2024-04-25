@@ -90,6 +90,7 @@ def screenOCR(region = None, textOnly = False):
     imageName = "{}.png".format(time.time()) #use current time for unique image name
     screenshot(region, output = imageName)
     result = ocr.ocr(imageName,cls=False)[0]
+    os.remove("{}.png".format(imageName))
     if not result: return None
     
     if textOnly:
