@@ -55,8 +55,7 @@ def openApp(app):
     runAppleScript('activate application "{}"''.format(app))
                    
 def quitApp(app):
-    cmd = """ osascript -e 'tell application "{}" to quit' """.format(app)
-    os.system(cmd)
+    runAppleScript('tell application "{}" to quit'.format(app))
 
 def getShellOutput(cmd):
     return subprocess.check_output(cmd, shell=True)
