@@ -52,7 +52,7 @@ def runAppleScript(code):
     os.system(cmd)
     
 def openApp(app):
-    runAppleScript('activate application "{}"''.format(app))
+    runAppleScript('activate application "{}"'.format(app))
                    
 def quitApp(app):
     runAppleScript('tell application "{}" to quit'.format(app))
