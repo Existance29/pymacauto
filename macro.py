@@ -6,7 +6,7 @@ import mss
 import numpy as np
 import pyscreeze
 import paddleocr
-
+#TODO: Add image recognition + mouse controls
 print("Initalising library")
 #disable the default pyautogui delay
 pag.PAUSE = 0
