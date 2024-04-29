@@ -62,8 +62,8 @@ def getShellOutput(cmd):
 
 def screenSize():
     output = {
-        "mouse": (width,height)
-        "screen": (sw, sh)
+        "screen": (width,height)
+        "pixel": (sw, sh)
     }
     return output
 
