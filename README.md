@@ -1,6 +1,6 @@
 # Complex mac macro
 
-A wrapper written in python for several automation libraries to create a all-in-one library for complex macros
+A wrapper written in python for several automation libraries alongside custom functions to create a all-in-one library for complex macros
 
 ## Requirements
 - Platform: MacOS 10.15 and later
