@@ -1,4 +1,4 @@
-# Complex mac macro
+# pymacauto
 
 A wrapper written in python for several automation libraries alongside custom functions to create a all-in-one library for complex macros
 
