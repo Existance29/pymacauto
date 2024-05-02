@@ -94,9 +94,9 @@ def getPixel(x1,y1):
 def locateImageOnScreen(needleImage, region = None, method = "pyscreezepillow", var = 0, confidence = 0.9, grayscale = None, limit = 1):
     method = method.lower()
     if method == "pyscreezepillow":
-        locateFunc = _locateAll_pillow
+        locateFunc = pyscreeze._locateAll_pillow
     elif method == "pyscreezecv"
-        locateFunc = _locateAll_opencv
+        locateFunc = pyscreeze._locateAll_opencv
     locateFunc(needleImage, screenshot(region), grayscale = grayscale, limit = limit, confidence = confidence)
 #OCR related functions
 class OCR:
