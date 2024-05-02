@@ -40,21 +40,16 @@ OCR (Text Recognition)
 Initalising an OCR Class
 """""""""
 
-.. code:: python
-
-  OCR(langs = ['en'])
-
-Parameters:  
-
-* langs: an array containing the languages for the model to detect. Language codes can be found `here <https://www.jaided.ai/easyocr/>`_
-
-
 Example:
 
 .. code:: python
 
   from pymacauto import *
   ocr = OCR(["en"]) #create an ocr class for english
+
+Parameters:  
+
+* langs: a list containing the languages for the model to detect. Language codes can be found `here <https://www.jaided.ai/easyocr/>`_
 
 readScreen(region = None, textOnly = False)
 """""""""
