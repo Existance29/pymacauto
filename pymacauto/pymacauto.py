@@ -120,7 +120,7 @@ class OCR:
 
     def locateTextOnScreen(text, region = None):
         res = readScreen(region = region)
-        for i in result:
+        for i in res:
             if text in i[1][0]:
                 return i
         return None
