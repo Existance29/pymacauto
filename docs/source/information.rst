@@ -28,7 +28,7 @@ X coordinate increases going to the right, while Y increases going down |br|
   |                           |
   +---------------------------+ 1439, 899
 
-|The bottom-right coordinates will be the resolution - 1. This is because the coordinates start at (0,0)
+The bottom-right coordinates will be the resolution - 1. This is because the coordinates start at (0,0)
 
 .. |br| raw:: html
 
