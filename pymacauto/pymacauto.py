@@ -31,7 +31,7 @@ def keyDown(key):
     pag.keyDown(key)
 
 def keyUp(key):
-    pag.keyDown(key)
+    pag.keyUp(key)
 
 #hold key down for x seconds
 def press(key, delay = 0.02):
@@ -39,7 +39,11 @@ def press(key, delay = 0.02):
     sleep(delay)
     keyUp(key)
 
-
+def write(message, interval=0.1, delay = 0.02):
+    for i in message:
+        press(i, delay)
+        sleep(interval)
+        
 def isRetina():
     return retina
 
@@ -63,21 +67,28 @@ def getCenter(coords, rounded = False):
 
 def screenSize():
     output = {
-        "screen": (width,height)
-        "pixel": (sw, sh)
+        "resolution": (width,height),
+        "pixel count": (sw, sh)
     }
     return output
 
 #wrapper for mss
 #use region in the same format as pyscreeze's
-def screenshot(region = (0,0,width,height), output = None)
+def screenshot(region = None, output = None, byte = False):
 
+    if region is None:
+        region = (0,0,width,height)
+        
     mssRegion = {'top': region[0], 'left': region[1], 'width': region[2], 'height': region[3]}
     with mss.mss() as sct:
         img = sct.grab(region)
         
-    if output is not None:
-        mss.tools.to_png(img.rgb, img.size, output=output)
+        if output is not None:
+            mss.tools.to_png(img.rgb, img.size, output=output)
+
+        if byte:
+            return mss.tools.to_png(img.rgb, img.size)
+        
     return img
 #Replace pyscreeze's screenshots with mss'
 #pyscreeze.screenshot = screenshot
@@ -95,7 +106,7 @@ def locateImageOnScreen(needleImage, region = None, method = "pyscreezepillow", 
     method = method.lower()
     if method == "pyscreezepillow":
         locateFunc = pyscreeze._locateAll_pillow
-    elif method == "pyscreezecv"
+    elif method == "pyscreezecv":
         locateFunc = pyscreeze._locateAll_opencv
     locateFunc(needleImage, screenshot(region), grayscale = grayscale, limit = limit, confidence = confidence)
 #OCR related functions
@@ -105,17 +116,24 @@ class OCR:
         self.ocr = easyocr.Reader(langs, gpu = False, quantize = False)
         
     #Read text from screen
-    def readScreen(region = None, textOnly = False):
-        result = self.ocr.readtext(screenshot(region))
+    def readScreen(self, region = None, textOnly = False):
+        result = self.ocr.readtext(screenshot(region, byte = True))
         if not result: return None
         
         if textOnly:
             return ''.join([x[1] for x in result])
         return result
 
-    def locateTextOnScreen(text, region = None):
-        res = readScreen(region = region)
+    def locateTextOnScreen(self, text, region = None, limit = 1):
+        res = self.readScreen(region = region)
+        out = []
+        count = 0
         for i in res:
             if text in i[1]:
-                return i
+                out.append(i)
+                count += 1
+                if count >= limit and limit:
+                    break
+            
+        if out: return out
         return None
