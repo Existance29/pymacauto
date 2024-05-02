@@ -91,7 +91,7 @@ def getPixel(x1,y1):
     col = tuple([int(x) for x in im[0,0]])
     return col
 
-def locateImageOnScreen(needleImage, region = None, method = "pyscreezepillow", var = None, confidence = 0.9, grayscale = None, limit = 1):
+def locateImageOnScreen(needleImage, region = None, method = "pyscreezepillow", var = 0, confidence = 0.9, grayscale = None, limit = 1):
     method = method.lower()
     if method == "pyscreezepillow":
         locateFunc = _locateAll_pillow
