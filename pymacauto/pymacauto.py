@@ -6,7 +6,7 @@ import subprocess
 import mss
 import numpy as np
 import pyscreeze
-import paddleocr
+import easyocr
 #TODO: Add image recognition + mouse controls
 
 #disable the default pyautogui delay
@@ -100,27 +100,22 @@ def locateImageOnScreen(needleImage, region = None, method = "pyscreezepillow", 
     locateFunc(needleImage, screenshot(region), grayscale = grayscale, limit = limit, confidence = confidence)
 #OCR related functions
 class OCR:
-    def __init__(self, **kwargs):
+    def __init__(self, langs = ['en']):
         #initialise ocr
-        defaultKwargs = {"lang": "en", "show_log": False, "use_angle_cls": False}
-        kwargs = { **defaultKwargs, **kwargs }
-        self.ocr = PaddleOCR(kwargs)
+        self.ocr = easyocr.Reader(langs, gpu = False, quantize = False)
         
     #Read text from screen
     def readScreen(region = None, textOnly = False):
-        imageName = "{}.png".format(time.time()) #use current time for unique image name
-        screenshot(region, output = imageName)
-        result = self.ocr.ocr(imageName,cls=False)[0]
-        os.remove("{}.png".format(imageName))
+        result = self.ocr.readtext(screenshot(region))
         if not result: return None
         
         if textOnly:
-            return ''.join([x[1][0] for x in result])
+            return ''.join([x[1] for x in result])
         return result
 
     def locateTextOnScreen(text, region = None):
         res = readScreen(region = region)
         for i in res:
-            if text in i[1][0]:
+            if text in i[1]:
                 return i
         return None
