@@ -2,9 +2,9 @@
 
 # -- Project information
 
-project = 'Lumache'
-copyright = '2021, Graziella'
-author = 'Graziella'
+project = 'pymacauto'
+copyright = '2024'
+author = 'exihs'
 
 release = '0.1'
 version = '0.1.0'
