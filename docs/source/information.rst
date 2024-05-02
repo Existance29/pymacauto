@@ -13,7 +13,7 @@ Mouse and Screen Position
 ^^^^^^^^^
 The X and Y coordinates start at the top left of the screen at (0,0). 
 |X coordinate increases going to the right, while Y increases going down
-.. code:: python
+.. code::
 
   0,0       X increases -->
   +---------------------------+
