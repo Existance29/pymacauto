@@ -8,11 +8,8 @@ Region accepts a tuple/list containing 4 integers for the left, top, width and h
 
 For example, region = (10,10,300,300) will capture a 300x300 area starting from (10,10) of the screen. If left blank, it will default to the entire screen
 
-Functions
-----------------
-
 Screenshot
-^^^^^^^^^
+----------------
 
 screenshot(region = None, output = None, byte = False)
 """""""""
@@ -38,7 +35,7 @@ Example:
   byte_image = screenshot(region = (0,0,400,400), byte = True) #Take a screenshot of a 400x400 square and return the image as bytes 
 
 OCR (Text Recognition)
-^^^^^^^^^
+----------------
 
 Initalising an OCR Class
 """""""""
