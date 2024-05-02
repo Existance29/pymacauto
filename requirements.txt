@@ -1,9 +1,4 @@
 pyautogui 
 pyscreeze 
 mss
-opencv-contrib-python==4.5.5.64 
-opencv-python==4.5.5.64
-pymupdf==1.23.1
-numpy<1.24.0
-paddlepaddle==2.3.2
-paddleocr==2.6.1.0
+easyocr
