@@ -15,10 +15,10 @@ Features
 
 Dependencies
 --------
-* Pyautogui (keyboard and mouse)
-* MSS (screenshots)
-* Pyscreeze and OpenCV (image detection)
-* EasyOCR (text recognition)
+* `Pyautogui <https://pypi.org/project/PyAutoGUI/>`_ (keyboard and mouse)
+* `MSS <https://pypi.org/project/mss/>`_ (screenshots)
+* `Pyscreeze <https://pypi.org/project/PyScreeze/>`_ and `OpenCV <https://pypi.org/project/opencv-python/>`_ (image detection)
+* `EasyOCR <https://pypi.org/project/easyocr/>`_ (text recognition)
 
 Contents
 --------
