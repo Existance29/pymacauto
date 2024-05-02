@@ -16,7 +16,7 @@ A wrapper written in python for several automation libraries alongside custom fu
 ## Dependencies
 - Pyscreeze
 - Pyautogui
-- PaddleOCR
+- EasyOCR
 - Numpy
 - MSS
 - opencv-python (cv2)
