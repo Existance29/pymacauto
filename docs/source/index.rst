@@ -19,5 +19,4 @@ Contents
 .. toctree::
 
    getting-started
-   keyboard
    
