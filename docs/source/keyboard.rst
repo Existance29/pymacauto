@@ -87,7 +87,7 @@ Keyboard Keys
 ----------------
 The following are the valid string characters to pass to the ``key`` parameter of the functions
 
-.. code-block:: console
+.. code-block:: python
 
   ['\t', '\n', '\r', ' ', '!', '"', '#', '$', '%', '&', "'", '(',
   ')', '*', '+', ',', '-', '.', '/', '0', '1', '2', '3', '4', '5', '6', '7',
