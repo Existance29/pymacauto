@@ -2,3 +2,4 @@ pyautogui
 pyscreeze 
 mss
 easyocr
+opencv-python
