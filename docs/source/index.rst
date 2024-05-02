@@ -1,22 +1,22 @@
-Welcome to Lumache's documentation!
+Welcome to PyMacAuto's documentation!
 ===================================
 
-**Lumache** (/lu'make/) is a Python library for cooks and food lovers
-that creates recipes mixing random ingredients.
-It pulls data from the `Open Food Facts database <https://world.openfoodfacts.org/>`_
-and offers a *simple* and *intuitive* API.
+PyMacAuto is a Python library for making macro scripts on the MacOS platform. It wraps popular automation libraries alongside custom functions for an all-in-one package.
 
-Check out the :doc:`usage` section for further information, including
-how to :ref:`installation` the project.
-
-.. note::
-
-   This project is under active development.
+Features
+--------
+* Keyboard Control
+* Mouse Control
+* Screenshots, 
+* Image Detection
+* Text Recognition 
+* Pixels
+* Other utility functions
 
 Contents
 --------
 
 .. toctree::
 
-   usage
-   api
+   installation
+   
