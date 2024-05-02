@@ -5,11 +5,17 @@ Functions
 ----------------
 
 keyDown(key)
-^^^^^^^^^
-Description
 """""""""
+
+Description:  
 Presses the key down
 
-Parameters
-"""""""""
+Parameters:  
 * key: key to press (see keyboard keys)
+
+Example:
+.. code:: python
+
+  from pymacauto import *
+
+  keyDown("a") #press down the a key
