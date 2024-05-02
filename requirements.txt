@@ -2,5 +2,5 @@ pyautogui
 pyscreeze 
 mss
 easyocr
-opencv-python
+opencv-python<=4.5.4.60
 opencv-python-headless<=4.5.4.60
