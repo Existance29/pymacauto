@@ -18,5 +18,5 @@ Contents
 
 .. toctree::
 
-   installation
+   getting-started
    
