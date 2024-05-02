@@ -62,7 +62,7 @@ Example:
 
   press("a", 0.5) #Press the a key for 0.5s
 
-press(message, interval=0.1, delay = 0.02)
+write(message, interval=0.1, delay = 0.02)
 """""""""
 
 Description:  
@@ -88,6 +88,7 @@ Keyboard Keys
 The following are the valid string characters to pass to the ``key`` parameter of the functions
 
 .. code-block:: console
+
   ['\t', '\n', '\r', ' ', '!', '"', '#', '$', '%', '&', "'", '(',
   ')', '*', '+', ',', '-', '.', '/', '0', '1', '2', '3', '4', '5', '6', '7',
   '8', '9', ':', ';', '<', '=', '>', '?', '@', '[', '\\', ']', '^', '_', '`',
