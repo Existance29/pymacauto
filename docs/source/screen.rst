@@ -59,7 +59,7 @@ Example:
   from pymacauto import *
   ocr = OCR(["en"]) #create an ocr class for english
 
-readScreen(self, region = None, textOnly = False)
+readScreen(region = None, textOnly = False)
 """""""""
 
 Description:  
@@ -80,7 +80,7 @@ Example:
   result = ocr.readScreen() #read all the text on the screen
   print(result)
 
-locateTextOnScreen(self, text, region = None, limit = 1)
+locateTextOnScreen(text, region = None, limit = 1)
 """""""""
 
 Description:  
