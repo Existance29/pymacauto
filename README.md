@@ -12,6 +12,7 @@ A wrapper written in python for several automation libraries alongside custom fu
 - Accessibility
 
 ## Documentation
+[readthedocs.io](https://pymacauto.readthedocs.io/en/latest/index.html)
 
 ## Dependencies
 - Pyscreeze
