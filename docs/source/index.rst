@@ -18,5 +18,5 @@ Contents
 
 .. toctree::
 
-   getting-started mouse keyboard screenshot utility
+   getting-started keyboard
    
