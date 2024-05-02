@@ -13,6 +13,13 @@ Features
 * Pixels
 * Other utility functions
 
+Dependencies
+--------
+* Pyautogui (keyboard and mouse)
+* MSS (screenshots)
+* Pyscreeze and OpenCV (image detection)
+* EasyOCR (text recognition)
+
 Contents
 --------
 
