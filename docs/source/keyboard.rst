@@ -61,3 +61,24 @@ Example:
   from pymacauto import *
 
   press("a", 0.5) #Press the a key for 0.5s
+
+press(message, interval=0.1, delay = 0.02)
+"""""""""
+
+Description:  
+
+types out a string character by character
+
+Parameters:  
+
+* message: the string to write
+* interval: the delay between characters (in seconds)
+* delay: how long to press each key for (in seconds)
+
+Example:
+
+.. code:: python
+
+  from pymacauto import *
+
+  write("hello!", interval = 0.1, delay = 0.03) #Type hello! 
