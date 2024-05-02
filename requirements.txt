@@ -3,3 +3,4 @@ pyscreeze
 mss
 easyocr
 opencv-python
+opencv-python-headless<=4.5.4.60
