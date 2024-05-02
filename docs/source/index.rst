@@ -27,5 +27,8 @@ Contents
    :maxdepth: 2
 
    getting-started
+   information
    keyboard
+   screen
+   
    
