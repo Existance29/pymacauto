@@ -42,7 +42,9 @@ OCR (Text Recognition)
 
 Initalising an OCR Class
 """""""""
+
 .. code:: python
+
   OCR(langs = ['en'])
 
 Parameters:  
