@@ -75,7 +75,7 @@ Example:
 
   from pymacauto import *
 
-  closeApp("safari") #close safari
+  quitApp("safari") #close safari
 
 screenSize()
 """""""""
@@ -109,4 +109,4 @@ Example:
 
   from pymacauto import *
 
-  print(getShellOutput("system_profiler SPDisplaysDataTyp")) #print out display information of the mac
+  print(getShellOutput("system_profiler SPDisplaysDataType")) #print out display information of the mac
