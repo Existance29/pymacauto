@@ -61,7 +61,7 @@ Reads all the text on screen and return a list containing the bounding box, the 
 Parameters:  
 
 * region: area to read (see region parameter above)
-* textOnly: image path to save the screenshot to (only png format accepted). If set to None, screenshot is not saved
+* textOnly: return only text
   
 Example:
 
