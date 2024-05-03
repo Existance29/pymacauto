@@ -94,3 +94,25 @@ Example:
   ocr = OCR(["en"]) #create an ocr class for english
   result = ocr.locateTextOnScreen("file", limit = 0) #find all texts containing "file" on the screen
   print(result)
+
+Pixel
+----------------
+
+getPixel(x1,y1):
+"""""""""
+
+Description:  
+
+Returns the color of the pixel at the specified coordinates in rgba format 
+
+Parameters:  
+
+* x1: x coordinate to capture the pixel
+* y1: y coordinate to capture the pixel
+
+Example:
+
+.. code:: python
+
+  from pymacauto import *
+  print(getPixel(50,50)) #display the pixel color at 50,50
